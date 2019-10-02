@@ -1,0 +1,206 @@
+<ion-header>
+            <h3 class="txt_18 top_navbar">
+				<a href="javascript:void(0);" (click)="myaccount()" class="top_nav_icon txt_white top_l_icon"><i class="fas fa-bars"></i></a>
+				<a href="javascript:void(0);" class="txt_white txt_uppercase letter_spacing_3 page_heading"> My Ads</a> &nbsp;
+				<!-- <a href="#" onclick="open_search_menu()" class="top_nav_icon txt_white top_r_icon_1" ><i class="far fa-search"></i></a>  -->
+				<a href="javascript:void(0);" class="top_nav_icon txt_white top_r_icon_2 notify_count_icon"><i class="far fa-bell" data-count=""></i></a>
+			</h3>
+</ion-header>
+
+<ion-content>
+
+           <div class="search_input p_lr_15 p_t_15">
+				<form action="javascript:void(0)">
+					<div class="form_group">
+						<input type="text" class="search_input_field" placeholder="Search Here">
+						<a class="search_input_icon" href="#"><i class="fas fa-search"></i></a>
+					</div>
+				</form>
+			</div>
+
+			<div class="main_sec p_lr_15 m_b_70 p_t_15"> <!-- m_b_70 for fixed footer btns -->
+
+				<!-- <p class="txt_20 width_100prcnt">Newly Added</p> -->
+
+				<div class="filter_option">
+					<form action="#">
+						<label for="sort_by" class="txt_12">Sort By:
+							<select name="sort_by">
+								<option value="Today">Today</option>
+								<option value="Yesterday">Yesterday</option>
+								<option value="Last Week" selected>Last Week</option>
+								<option value="Last Month">Last Month</option>
+								<option value="Last Week">Last Week</option>
+							</select>
+						</label>
+						<label for="price" class="txt_12">Price:
+							<select name="price">
+								<option value="Low to High" selected>Low to High</option>
+								<option value="High to Low">High to Low</option>
+								<option value="Under $100">Under $100</option>
+							</select>
+						</label>
+						<label for="price" class="txt_12"><br>Status:
+							<select name="price">
+								<option value="All" selected>All</option>
+								<option value="Sold">Sold</option>
+								<option value="Expired">Expired</option>
+							</select>
+						</label>
+					</form>
+				</div>
+				No Ads By You!
+               <!--
+				<div class="prod_list d_ib width_100prcnt">
+
+					<div class="prod_item_full_w match_item">
+						<img src="assets/images/img1.jpg" alt="Product Image">
+						<div class="ad_status"><span class="bg_green txt_uppercase txt_12 txt_white">Active</span></div>
+						<div class="prod_info p_lr_10 p_tb_10">
+							<p class="txt_14"><a href="product_detail.html">Samsung Smart Phone Gold </a></p>
+							<div class="d_ib width_100prcnt m_t_10">
+								<p class="side_top_main_heading txt_16 w_73prcnt">$1000.00</p>
+								<a href="#" class="side_top_right_icon txt_16 w_27prcnt"><i class="fas fa-eye"></i> 166</a>
+							</div>
+							<p class="txt_12 p_t_5"><span class="txt_blue">Post Date: </span> 20-07-2019</p>
+							<p class="txt_12"><span class="txt_blue">Expiry Date: </span> 19-08-2019</p>
+							<div class="ad_actions txt_uppercase txt_12 m_t_10">
+								<a href="#" class="txt_white bg_blue">Edit</a>
+								<a href="#" class="txt_white bg_red">Delete</a>
+								<a href="#" class="txt_white bg_yellow">Mark As Sold</a>
+							</div>
+						</div>
+					</div>
+					<div class="prod_item_full_w match_item fav_prod">
+						<img src="assets/images/img2.jpg" alt="Product Image">
+						<div class="ad_status"><span class="bg_yellow txt_uppercase txt_12 txt_white">Sold</span></div>
+						<div class="prod_info p_lr_10 p_tb_10">
+							<p class="txt_14"><a href="product_detail.html">Samsung Smart Phone Gold </a></p>
+							<div class="d_ib width_100prcnt m_t_10">
+								<p class="side_top_main_heading txt_16 w_73prcnt">$1000.00</p>
+								<a href="#" class="side_top_right_icon txt_16 w_27prcnt"><i class="fas fa-eye"></i> 166</a>
+							</div>
+							<p class="txt_12 p_t_5"><span class="txt_blue">Post Date: </span> 20-07-2019</p>
+							<p class="txt_12"><span class="txt_blue">Expiry Date: </span> 19-08-2019</p>
+							<div class="ad_actions txt_uppercase txt_12 m_t_10">
+								<a href="#" class="txt_white bg_blue">Edit</a>
+								<a href="#" class="txt_white bg_red">Delete</a>
+								<a href="#" class="txt_white bg_yellow">Mark As Sold</a>
+							</div>
+						</div>
+					</div>
+					<div class="prod_item_full_w match_item">
+						<img src="assets/images/img3.jpg" alt="Product Image">
+						<div class="ad_status"><span class="bg_l_gray txt_uppercase txt_12 txt_black">Expire</span></div>
+						<div class="prod_info p_lr_10 p_tb_10">
+							<p class="txt_14"><a href="product_detail.html">Samsung Smart Phone Gold </a></p>
+							<div class="d_ib width_100prcnt m_t_10">
+								<p class="side_top_main_heading txt_16 w_73prcnt">$1000.00</p>
+								<a href="#" class="side_top_right_icon txt_16 w_27prcnt"><i class="fas fa-eye"></i> 166</a>
+							</div>
+							<p class="txt_12 p_t_5"><span class="txt_blue">Post Date: </span> 20-07-2019</p>
+							<p class="txt_12"><span class="txt_blue">Expiry Date: </span> 19-08-2019</p>
+							<div class="ad_actions txt_uppercase txt_12 m_t_10">
+								<a href="#" class="txt_white bg_blue">Edit</a>
+								<a href="#" class="txt_white bg_red">Delete</a>
+								<a href="#" class="txt_white bg_yellow">Mark As Sold</a>
+							</div>
+						</div>
+					</div>
+					<div class="prod_item_full_w match_item">
+						<img src="assets/images/img4.jpg" alt="Product Image">
+						<div class="ad_status"><span class="bg_green txt_uppercase txt_12 txt_white">Active</span></div>
+						<div class="prod_info p_lr_10 p_tb_10">
+							<p class="txt_14"><a href="product_detail.html">Samsung Smart Phone Gold </a></p>
+							<div class="d_ib width_100prcnt m_t_10">
+								<p class="side_top_main_heading txt_16 w_73prcnt">$1000.00</p>
+								<a href="#" class="side_top_right_icon txt_16 w_27prcnt"><i class="fas fa-eye"></i> 166</a>
+							</div>
+							<p class="txt_12 p_t_5"><span class="txt_blue">Post Date: </span> 20-07-2019</p>
+							<p class="txt_12"><span class="txt_blue">Expiry Date: </span> 19-08-2019</p>
+							<div class="ad_actions txt_uppercase txt_12 m_t_10">
+								<a href="#" class="txt_white bg_blue">Edit</a>
+								<a href="#" class="txt_white bg_red">Delete</a>
+								<a href="#" class="txt_white bg_yellow">Mark As Sold</a>
+							</div>
+						</div>
+					</div>
+					<div class="prod_item_full_w match_item fav_prod">
+						<img src="assets/images/img2.jpg" alt="Product Image">
+						<div class="ad_status"><span class="bg_green txt_uppercase txt_12 txt_white">Active</span></div>
+						<div class="prod_info p_lr_10 p_tb_10">
+							<p class="txt_14"><a href="product_detail.html">Samsung Smart Phone Gold </a></p>
+							<div class="d_ib width_100prcnt m_t_10">
+								<p class="side_top_main_heading txt_16 w_73prcnt">$1000.00</p>
+								<a href="#" class="side_top_right_icon txt_16 w_27prcnt"><i class="fas fa-eye"></i> 166</a>
+							</div>
+							<p class="txt_12 p_t_5"><span class="txt_blue">Post Date: </span> 20-07-2019</p>
+							<p class="txt_12"><span class="txt_blue">Expiry Date: </span> 19-08-2019</p>
+							<div class="ad_actions txt_uppercase txt_12 m_t_10">
+								<a href="#" class="txt_white bg_blue">Edit</a>
+								<a href="#" class="txt_white bg_red">Delete</a>
+								<a href="#" class="txt_white bg_yellow">Mark As Sold</a>
+							</div>
+						</div>
+					</div>
+					<div class="prod_item_full_w match_item">
+						<img src="assets/images/img3.jpg" alt="Product Image">
+						<div class="ad_status"><span class="bg_green txt_uppercase txt_12 txt_white">Active</span></div>
+						<div class="prod_info p_lr_10 p_tb_10">
+							<p class="txt_14"><a href="product_detail.html">Samsung Smart Phone Gold </a></p>
+							<div class="d_ib width_100prcnt m_t_10">
+								<p class="side_top_main_heading txt_16 w_73prcnt">$1000.00</p>
+								<a href="#" class="side_top_right_icon txt_16 w_27prcnt"><i class="fas fa-eye"></i> 166</a>
+							</div>
+							<p class="txt_12 p_t_5"><span class="txt_blue">Post Date: </span> 20-07-2019</p>
+							<p class="txt_12"><span class="txt_blue">Expiry Date: </span> 19-08-2019</p>
+							<div class="ad_actions txt_uppercase txt_12 m_t_10">
+								<a href="#" class="txt_white bg_blue">Edit</a>
+								<a href="#" class="txt_white bg_red">Delete</a>
+								<a href="#" class="txt_white bg_yellow">Mark As Sold</a>
+							</div>
+						</div>
+					</div>
+
+				</div>-->
+				
+			</div>
+
+
+			<div class="ftr_btns d_ib width_100prcnt">
+				<a href="javascript:void(0)" class="txt_white input_btn_red"><i class="fas fa-file-signature"></i> Create Your Ad</a>
+				<a href="javascript:void(0)" class="txt_white input_btn_blue"><i class="fas fa-file-alt"></i> Your Ads</a>
+			</div>
+			<script>
+				matchColumns=function(){ 
+			var divs,contDivs,maxHeight,divHeight,d; 
+			divs=document.getElementsByTagName('div'); 
+			contDivs=[]; 
+			maxHeight=0;  
+			for(var i=0;i<divs.length;i++){  
+			// make collection with <div> elements with class attribute "match_item"
+				if(/\bmatch_item\b/.test(divs[i].className)){ 
+					d=divs[i]; 
+					contDivs[contDivs.length]=d;  
+					if(d.offsetHeight){ 
+						divHeight=d.offsetHeight; 					
+					} 
+					else if(d.style.pixelHeight){ 
+						divHeight=d.style.pixelHeight;					 
+					} 
+					maxHeight=Math.max(maxHeight,divHeight); 
+				} 
+			} 
+			for(var i=0;i<contDivs.length;i++){ 
+				contDivs[i].style.height=maxHeight + "px"; 
+			} 
+		}  
+		window.onload=function(){ 
+			if(document.getElementsByTagName){ 
+				matchColumns();			 
+			} 
+		} 
+
+	</script>
+
+</ion-content>

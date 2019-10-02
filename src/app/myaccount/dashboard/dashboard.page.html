@@ -1,0 +1,62 @@
+<ion-header>
+            <h3 class="txt_18 top_navbar">
+				<a href="javascript:void(0);" (click)="myaccount()" class="top_nav_icon txt_white top_l_icon"><i class="fas fa-bars"></i></a>
+				<a href="javascript:void(0);" class="txt_white txt_uppercase letter_spacing_3 page_heading"> Dashboard</a> &nbsp;
+				<!-- <a href="#" onclick="open_search_menu()" class="top_nav_icon txt_white top_r_icon_1" ><i class="far fa-search"></i></a>  -->
+				<a href="javascript:void(0);" class="top_nav_icon txt_white top_r_icon_2 notify_count_icon"><i class="far fa-bell" data-count=""></i></a>
+			</h3>
+</ion-header>
+
+<ion-content>
+            <div class="user_container">
+				<div class="m_t_20 m_b_20 txt_center">
+					<img class="user_image" src="assets/images/user-female.jpg" alt="User Image" width="80px">
+					<h5 class="txt_red txt_uppercase m_t_10 letter_spacing_6">{{ userInfo.first_name}}</h5>
+					<h6 class="txt_black m_t_10 txt_14"><i class="fas fa-map-marker-alt m_r_5"></i> {{ userInfo.address }}</h6>
+				</div>
+			</div>
+			<div class="main_sec p_lr_15 m_b_70 m_t_20"> <!-- m_b_70 for fixed footer btns -->
+					<div class="dashboard_card">
+						<div class="card_image">
+							<img src="assets/images/dropbox_icon.jpg" alt="Dropbox" title="Dropbox" width="70px" />
+						</div>
+						<div class="card_content">
+							<div class="card_title txt_blue txt_16">Total Posted Ads</div>
+							<div class="card_count m_t_5 txt_20"> 0</div>
+						</div>
+					</div>
+					<div class="dashboard_card">
+						<div class="card_image">
+							<img src="assets/images/active_ads.jpg" alt="Dropbox" title="Dropbox" width="70px" />
+						</div>
+						<div class="card_content">
+							<div class="card_title txt_blue txt_16">Active Ads</div>
+							<div class="card_count m_t_5 txt_20">3</div>
+						</div>
+					</div>
+					<div class="dashboard_card">
+						<div class="card_image">
+							<img src="assets/images/user_icon.jpg" alt="Dropbox" title="Dropbox" width="70px" />
+						</div>
+						<div class="card_content">
+							<div class="card_title txt_blue txt_16">My Followers</div>
+							<div class="card_count m_t_5 txt_20">62</div>
+						</div>
+					</div>
+					<div class="dashboard_card">
+						<div class="card_image">
+							<img src="assets/images/like_icon.jpg" alt="Dropbox" title="Dropbox" width="70px" />
+						</div>
+						<div class="card_content">
+							<div class="card_title txt_blue txt_16">My wishlist</div>
+							<div class="card_count m_t_5 txt_20">16</div>
+						</div>
+					</div>
+
+				<div class="ftr_btns d_ib width_100prcnt">
+					<a href="javascript:void(0);" class="txt_white input_btn_red"><i class="fas fa-comment"></i> Chat</a>
+					<a href="javascript:void(0);" class="txt_white input_btn_blue"><i class="fas fa-file-signature"></i> Create Your Ad</a>
+				</div>
+			</div>
+
+</ion-content>

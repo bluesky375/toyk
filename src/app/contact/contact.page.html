@@ -1,0 +1,55 @@
+<ion-header>
+            <h3 class="txt_18 top_navbar">
+				<a href="javascript:void(0);" (click)="openMenu()" class="top_nav_icon txt_white top_l_icon"><i class="fas fa-bars"></i></a>
+				<a href="javascript:void(0);" class="txt_white txt_uppercase letter_spacing_3 page_heading"> Contact</a> &nbsp;
+				<!-- <a href="#" onclick="open_search_menu()" class="top_nav_icon txt_white top_r_icon_1" ><i class="far fa-search"></i></a>  -->
+				<a href="javascript:void(0);" class="top_nav_icon txt_white top_r_icon_2 notify_count_icon"><i class="far fa-bell" data-count=""></i></a>
+			</h3>
+</ion-header>
+
+<ion-content>
+            <div class="main_sec p_lr_15 m_b_70"> <!-- m_b_70 for fixed footer btns -->
+
+				<div class="m_t_20">
+					<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+						<div class="form_group">
+							<span class="input_icon"><i class="fas fa-user"></i></span>
+							<input type="text" [(ngModel)]="name" name="name" class="input_field" placeholder="Enter Your Name">
+						</div>
+						<div class="form_group">
+							<span class="input_icon"><i class="fas fa-envelope"></i></span>
+							<input type="email" [(ngModel)]="email" name="email" class="input_field" required placeholder="Enter Your Email">
+						</div>
+						<div class="form_group">
+							<span class="input_icon"><i class="fas fa-file-alt"></i></span>
+							<input type="text" [(ngModel)]="subj" name="subj" class="input_field" placeholder="Enter Subject">
+						</div>
+						<div class="form_group textarea_group">
+							<span class="input_icon"><i class="fas fa-comment-alt"></i></span>
+							<textarea rows="5" [(ngModel)]="message" name="message" class="textarea_field" placeholder="Enter Message"></textarea>
+						</div>
+						<div class="form_group ">
+							<input type="submit" class="input_btn input_btn_red" value="SUBMIT">
+						</div>
+					</form>
+				</div>
+
+				<div class="ftr_btns d_ib width_100prcnt">
+					<a href="javascript:void(0);" (click)="creatad()" class="txt_white input_btn_red"><i class="fas fa-file-signature"></i> Create Your Ad</a>
+					<a href="javascript:void(0);" class="txt_white input_btn_blue"><i class="fas fa-file-alt"></i> Your Ads</a>
+				</div>
+
+			</div> 
+			<div id="popupBox" class="white_content" #showNotification>
+				<h1 class="txt_d_blue txt_center txt_18 txt_w_700">Message!</h1>
+				<a href="javascript:void(0)" onclick="popup_close();" class="close txt_18 txt_center popup_close_btn"><i
+						class="far fa-window-close"></i></a>
+				<p style="clear: both"></p>
+				<p class="popup_txt txt_center txt_18">We have received your message, we will revert back soon.</p>
+				<a routerLink="/home" class="alert_single_btn txt_18 txt_center">OK</a>
+            </div>
+
+		
+		<div id="popupBackground" class="black_overlay"></div>
+
+</ion-content>

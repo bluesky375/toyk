@@ -1,0 +1,56 @@
+<ion-content>
+    <div class="container_fluid bg_img_light">
+		<div class="container d_ib">
+			<div class="m_t_120 m_b_50">
+				<a href="home.html"><img src="assets/images/logo.png" alt="Logo" style="margin-right: auto; margin-left: auto; display: block; width: 70%;"></a>
+			</div>
+
+			<!-- <div class="signup_form p_lr_20"> -->
+			<div class="signup_form p_lr_30">
+				<h1 class="txt_center txt_w_700 m_b_50">LOGIN</h1>
+				<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+					<div class="form_group">
+						<span class="input_icon"><i class="fas fa-user"></i></span>
+						<input type="email" [(ngModel)]="email" name="email" class="input_field" placeholder="Username or Email">
+					</div>
+					<div class="error-msg">
+                            <label *ngIf="this.errors?.email && this.errors.email.length > 0" for=""
+                                class="error">{{ this.errors.email[0] }}</label>
+                    </div><br>
+					<div class="form_group">
+						<span class="input_icon"><i class="fas fa-key"></i></span>
+						<input type="password" [(ngModel)]="password" name="password" class="input_field" placeholder="Enter Password">
+					</div>
+                    <div class="error-msg">
+                            <label *ngIf="this.errors?.password && this.errors.password.length > 0" for=""
+                                class="error">{{ this.errors.password[0] }}</label>
+                        </div>
+					<div class="form_group m_b_30">
+						<a routerLink="/forgot_password" class="txt_12"><u>Forgot Password?</u></a>
+					</div>
+
+					<div class="form_group p_t_5">
+						<input type="submit" class="input_btn input_btn_red" value="LOGIN">
+					</div>
+				</form>
+				<p class="m_t_20 m_b_120 txt_center txt_12">Don't have an account? <a routerLink="/register" class="txt_blue txt_w_700 txt_uppercase"><u>Register Now</u></a></p>
+			</div>
+
+		</div>
+
+
+		
+		<div id="popupBackground" class="black_overlay"></div>
+
+
+	</div>
+
+
+
+
+
+
+
+	
+   
+</ion-content>

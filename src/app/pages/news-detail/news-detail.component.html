@@ -1,0 +1,229 @@
+<ion-header>
+    
+	        <h3 class="txt_18 top_navbar">
+				<a href="javascript:void(0);" (click)="back()" class="top_nav_icon txt_white top_l_icon"><i class="fas fa-arrow-left"></i></a>
+				<a href="javascript:void(0);" class="txt_white txt_uppercase letter_spacing_3 page_heading"> Product Detail</a> &nbsp;
+				<!-- <a href="#" onclick="open_search_menu()" class="top_nav_icon txt_white top_r_icon_1" ><i class="far fa-search"></i></a>  -->
+				<a href="javascript:void(0);" class="top_nav_icon txt_white top_r_icon_2 notify_count_icon"><i class="far fa-bell" data-count=""></i></a>
+			</h3>
+</ion-header>
+<ion-content>
+
+    
+			<div class="search_input p_lr_15 p_t_15">
+				<form action="javascript:void(0)">
+					<div class="form_group">
+						<input type="text" class="search_input_field" placeholder="Search Here">
+						<a class="search_input_icon" href="javascript:void(0);"><i class="fas fa-search"></i></a>
+					</div>
+				</form>
+			</div>
+
+
+			
+			<div class="single_prod_item p_t_15">
+
+				<img src="{{ news_detail?.News.file }}" alt="Product Image">
+				<div class="prod_info p_lr_10 p_tb_10">
+					<p class="txt_14"><a href="product_detail.html"><span class="txt_uppercase txt_blue txt_w_700">{{ news_detail?.NewsCategory[1].name }} - </span> {{ news_detail?.News.title }}</a></p>
+					<p class="txt_18 p_t_5">$ {{ news_detail?.News.number }}</p>
+					<p class="prod_location txt_12 p_t_5 txt_grey"><a href="#" class="txt_grey"><i class="fas fa-map-marker-alt"></i> {{ news_detail?.News.location }}</a></p>
+
+					<div class="d_ib width_100prcnt m_t_10 prod_post_date">
+						<p class="side_top_main_heading txt_12 width_70prcnt">Publish Date: <span class="txt_grey">{{ news_detail?.News.created_at }}</span></p>
+						<div class="side_top_right_icon width_30prcnt">
+							<a href="javascript:void(0);" class="txt_blue txt_20"><i class="fas fa-share-alt"></i></a>
+							<a href="javascript:void(0);" class="txt_red txt_20 m_l_30"><i class="far fa-heart"></i></a>
+						</div>
+					</div>
+
+					<p class="p_tb_10">Product Detail: </p>
+
+					<div class="prod_info_table">
+						<table>
+							<tr>
+								<th>Category</th>
+								<td>{{ news_detail?.NewsCategory[0].name }}</td>
+							</tr>
+							<tr>
+								<th>Products</th>
+								<td>{{ news_detail?.NewsCategory[1].name }}</td>
+							</tr>
+							<tr>
+								<th>Brand</th>
+								<td>Brand Name Here</td>
+							</tr>
+							<tr>
+								<th>Description</th>
+								<td>{{ news_detail?.News.description }}</td>
+							</tr>
+						</table>	
+					</div>
+
+					<p class="p_tb_10">Seller's Profile: </p>
+
+					<div class="seller_profile_small">
+						<table class="width_100prcnt">
+							<tr>
+								<td width="60px" align="left">
+									<img src="assets/images/test.jpg" alt="Profile Pic" width="50px">
+								</td>
+								<td>
+									<p class="txt_w_700">John Doe</p>
+									<p class="prod_location txt_12 txt_grey">Member Since <br>June, 2019</p>
+								</td>
+								<td align="right">
+									<a href="javascript:void(0);" class="txt_uppercase input_btn_red simple_btn">View Profile</a>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+				</div>
+
+			</div>
+
+
+
+			<div class="main_sec p_lr_15 m_b_70"> <!-- m_b_70 for fixed footer btns -->		
+
+				<p class="txt_20 width_100prcnt">Related Products</p>
+
+				<div class="prod_list d_ib width_100prcnt">
+
+					<div class="prod_item match_item">
+						<img src="assets/images/img1.jpg" alt="Product Image">
+						<div class="prod_info p_lr_10 p_tb_10">
+							<p class="txt_14"><a href="javascript:void(0);">Samsung Smart Phone Gold</a></p>
+							<div class="d_ib width_100prcnt p_t_15">
+								<p class="side_top_main_heading txt_18 w_73prcnt">$1000.00</p>
+								<a href="javascript:void(0);" class="side_top_right_icon txt_red txt_20 w_27prcnt"><i class="far fa-heart"></i></a>
+							</div>
+							<p class="prod_location txt_12 p_t_5 txt_grey"><i class="fas fa-map-marker-alt"></i> Northwest, Washington, DC</p>
+						</div>
+					</div>
+					<div class="prod_item match_item fav_prod">
+						<img src="assets/images/img2.jpg" alt="Product Image">
+						<div class="prod_info p_lr_10 p_tb_10">
+							<p class="txt_14"><a href="javascript:void(0);">Samsung Smart Phone Gold</a></p>
+							<div class="d_ib width_100prcnt p_t_15">
+								<p class="side_top_main_heading txt_18 w_73prcnt">$1000.00</p>
+								<a href="javascript:void(0);" class="side_top_right_icon txt_red txt_20 w_27prcnt"><i class="far fa-heart fav_prod_icon"></i></a>
+							</div>
+							<p class="prod_location txt_12 p_t_5 txt_grey"><i class="fas fa-map-marker-alt"></i> Northwest, Washington, DC</p>
+						</div>
+					</div>
+					<div class="prod_item match_item">
+						<img src="assets/images/img3.jpg" alt="Product Image">
+						<div class="prod_info p_lr_10 p_tb_10">
+							<p class="txt_14"><a href="javascript:void(0);">Samsung Smart Phone Gold</a></p>
+							<div class="d_ib width_100prcnt p_t_15">
+								<p class="side_top_main_heading txt_18 w_73prcnt">$1000.00</p>
+								<a href="javascript:void(0);" class="side_top_right_icon txt_red txt_20 w_27prcnt"><i class="far fa-heart"></i></a>
+							</div>
+							<p class="prod_location txt_12 p_t_5 txt_grey"><i class="fas fa-map-marker-alt"></i> Northwest, Washington, DC</p>
+						</div>
+					</div>
+					<div class="prod_item match_item">
+						<img src="assets/images/img4.jpg" alt="Product Image">
+						<div class="prod_info p_lr_10 p_tb_10">
+							<p class="txt_14"><a href="javascript:void(0);">Samsung Smart Phone Gold</a></p>
+							<div class="d_ib width_100prcnt p_t_15">
+								<p class="side_top_main_heading txt_18 w_73prcnt">$1000.00</p>
+								<a href="javascript:void(0);" class="side_top_right_icon txt_red txt_20 w_27prcnt"><i class="far fa-heart"></i></a>
+							</div>
+							<p class="prod_location txt_12 p_t_5 txt_grey"><i class="fas fa-map-marker-alt"></i> Northwest, Washington, DC</p>
+						</div>
+					</div>
+
+				</div>
+				
+			</div>
+
+
+			<div class="ftr_btns d_ib width_100prcnt">
+				<a href="javascript:void(0);" class="txt_white input_btn_red"><i class="fas fa-comment"></i> Chat</a>
+				<a href="javascript:void(0);" class="txt_white input_btn_blue"><i class="fas fa-phone"></i> Call</a>
+			</div>
+    <!--
+    <div class="container bg_white" >
+        <div class="home_page d_ib">
+            <div class="detail_img cm-detail_img">
+                
+                <img *ngIf="news_detail?.News.type == 'image'" (click)="openImage(news_detail?.News.file)"
+                    src="{{ news_detail?.News.file }}" alt="Image">
+                <img *ngIf="news_detail?.News?.type == 'pdf'" src="assets/images/pdf.png"
+                    (click)="viewDocument(news_detail?.News)" alt="Image" class="img-t">
+                <audio controls *ngIf="news_detail?.News.type == 'audio'">
+                    <source src="{{ news_detail?.News.file }}" type="audio/ogg">
+                    <source src="{{ news_detail?.News.file }}" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+                <video height="240" controls *ngIf="news_detail?.News.type == 'video'"  controlsList="nodownload" poster="{{ news_detail?.News.thumbnail }}">
+                    <source src="{{ news_detail?.News.file }}" type="video/mp4">
+                    <source src="{{ news_detail?.News.file }}" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+                <div *ngIf="news_detail?.News.type == 'video'" class="download-cover">
+                    <a class="download-link" href="{{ news_detail?.News.file }}" target="_blank"  download>Download</a>
+                </div>
+                <div class="upper_img_desc" style="background:#7ac043;color:#fff;">
+                    <div [innerHTML]="news_detail?.NewsCategory | arrayString"></div>
+                    <div class="item_time m_t_5">News No.: {{ news_detail?.News.number }}</div>
+               
+				</div>
+               
+            </div>
+            <div class="video_info">
+                <div class="left_info">
+                    <ul>
+                        <li><a href="javascript:void(0);" [ngStyle]="{'color':news_detail?.News.isLike > 0?'green':''}"
+                                (click)="addLike(news_detail?.News);"><i class="fa fa-thumbs-up"></i></a>
+                            {{ news_detail?.News.total_likes }}</li>
+                        <li><a href="javascript:void(0);" [ngStyle]="{'color':news_detail?.News.isUnLike > 0?'red':''}"
+                                (click)="addUnLike(news_detail?.News);"><i class="fa fa-thumbs-down"></i></a>
+                            {{ news_detail?.News.total_dislikes }}</li>
+                    </ul>
+                </div>
+                <div class="right_info txt_right">
+                    <ul>
+                        <li style="float: left"><a href="javascript:void(0);"><i class="fas fa-eye"></i></a>
+                            {{ news_detail?.News.view_count }}</li>
+                        <li class="share_icon"><a href="javascript:void(0);" (click)="shareMsg(news_detail?.News)"><i
+                                    class="far fa-share-alt"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="under_info">
+             
+               
+                <div class="left_info txt_left width_100prcnt source_publish_info">
+                    <ul>
+                        <li>Published Date: {{ news_detail?.News.created_at | date:'d MMMM, y' }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div *ngIf="news_detail?.NewComment?.id != null" class="comment_sec m_lr_15">
+                <h5 class="txt_green">Comment:</h5>
+                <p class="comment_txt">{{ news_detail?.NewComment.comment }} <b>By {{ news_detail?.NewComment.User.first_name }}</b></p>
+            </div> <br>
+            <div class="detail_txt_sec m_lr_15 p_b_20">
+                {{ news_detail?.News.description }}
+            </div>
+        </div>
+        <div id="popupBox" class="white_content">
+            <h1 class="txt_d_blue txt_center txt_18 txt_w_700">Share News</h1>
+            <a href="javascript:void(0)" onclick="popup_close();" class="close txt_18 txt_center popup_close_btn"><i
+                    class="far fa-times"></i></a>
+            <p style="clear: both"></p>
+            <p class="popup_txt txt_center txt_18">Would like to add comment?</p>
+            <div class="two_btn_prnt">
+                <a href="javascript:void(0)" onclick="popup_close();"
+                    class="no_btn alert_single_btn txt_18 txt_center">No</a>
+                <a href="javascript:void(0)" onclick="popup_close();" class="alert_single_btn txt_18 txt_center">Yes</a>
+            </div>
+        </div>
+        <div id="popupBackground" class="black_overlay"></div>
+    </div>-->
+</ion-content>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Toyk Mobile App</title>
+
+    <base href="./" />
+
+    <meta name="viewport"
+        content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="assets/css/core.css">
+	<link rel="stylesheet" href="assets/css/flex-utils.css">
+	<link rel="stylesheet" href="assets/css/float-elements.css">
+	<link rel="stylesheet" href="assets/css/global.bundle.css">
+	<link rel="stylesheet" href="assets/css/ionic.bundle.css">
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<link rel="stylesheet" href="assets/css/padding.css">
+	<link rel="stylesheet" href="assets/css/structure.css">
+	<link rel="stylesheet" href="assets/css/text-alignment.css">
+	<link rel="stylesheet" href="assets/css/text-transformation.css">
+	<link rel="stylesheet" href="assets/css/typography.css">
+	<link rel="stylesheet" href="assets/css/utils.bundle.css">
+
+	<link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="css/maybe_ionic.css">
+    <link rel="stylesheet" href="assets/css/style.css"> -->
+    <!-- add to homescreen for ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+</head>
+
+<body>
+  <div class="container_fluid">
+	<div class="container d_ib">
+       <app-root></app-root>
+	</div> <!-- /.container -->
+  </div> <!-- /.container_fluid -->
+    <script>
+        function popup_for_alert() {
+            document.getElementById('popupBox').style.display = 'block'; document.getElementById('popupBackground').style.display = 'block';
+        }
+        function popup_close() {
+            document.getElementById('popupBox').style.display = 'none'; document.getElementById('popupBackground').style.display = 'none'
+        }
+
+        function open_catg_Nav() {
+            close_menu_Nav();
+            document.getElementById("catg_side_nav").style.width = "100%";
+        }
+        function close_catg_Nav() {
+            document.getElementById("catg_side_nav").style.width = "0";
+        }
+
+        function open_menu_Nav() {
+            // close_catg_Nav();
+            document.getElementById("menu_side_nav").style.width = "100%";
+        }
+        function close_menu_Nav() {
+            document.getElementById("menu_side_nav").style.width = "0";
+        }
+        function open_search_menu() {
+            document.getElementById("search_menu").style.height = "100%";
+        }
+        function close_search_menu() {
+            document.getElementById("search_menu").style.height = "0";
+        }
+    </script>
+
+</body>
+
+</html>

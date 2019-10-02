@@ -1,0 +1,133 @@
+<ion-header>
+    <h3 class="txt_20 top_navbar">
+        <a href="javascript:void(0);" (click)="openMenu()" class="top_nav_icon top_l_icon"><i class="far fa-list-ul"></i></a><a
+            href="javascript:void(0);" class="category_top_menu">
+        </a> &nbsp;
+        <a (click)="filter();" class="" [ngClass]="{filter_search:filter_search}"><i class="fal fa-filter"></i></a>&nbsp;
+        <a href="javascript:void(0);" (click)="openSearch()" class="top_nav_icon top_r_icon_1 search_icon {{ searchClass }}"><i
+                class="far fa-search" data-count=""></i></a>&nbsp;
+        {{ keyword }}
+
+        <!-- <a (click)="filter();" class="filter_icon" [ngClass]="{filter_search:filter_search}"><i
+                class="fal fa-filter"></i></a> -->
+
+
+        <a href="javascript:void(0);" (click)="notification()" class="top_nav_icon top_r_icon_2 notify_count_icon"><i
+                *ngIf="totalUnread > 0 else noicon" class="far fa-bell" data-count=""></i>
+            <ng-template #noicon>
+                <i class="far fa-bell"></i>
+            </ng-template>
+        </a>
+    </h3>
+</ion-header>
+<ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)" snapback-duration="30ms" [disabled]="refreshStatus">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+	
+    <div class="container bg_l_gray">
+        <div class="home_page d_ib">
+            <div class="inner_sec p_lr_10 p_tb_10">
+                <!-- <div class="news_tabs">
+                    <ul>
+                        <li class="latest_news {{ today }}"><a href="javascript:void(0);" (click)="getNews()">LATEST
+                                NEWS</a></li>
+                        <li class="recent_viewed {{ recent }}"><a href="javascript:void(0);"
+                                (click)="getRecentNews()">RECENTLY VIEWED</a></li>
+                    </ul>
+                </div> -->
+                <div class="video_list" *ngIf="news?.length > 0; else elsetemp">
+                    <div class="video_item" *ngFor="let new of news">
+                        <div class="video-item-heading">
+                            <h2 ngxTextHighlight [content]="new?.News.title" [searchTerm]="keyword"></h2>&nbsp;<i *ngIf="new?.News?.source == 'fb'"
+                                class="fab fa-facebook"></i><i *ngIf="new?.News?.source == 'twitter'" class="fab fa-twitter"></i><i
+                                *ngIf="new?.News?.source == 'tv'" class="far fa-tv"></i> <i *ngIf="new?.News?.source == 'internet'"
+                                class="fa fa-globe"></i>
+                        </div>
+                        <div class="source-wrapper">
+                            <div class="source-cover">
+                                Source:<a href="javascript:void(0);">
+                                    &nbsp;</a>
+                                {{ new?.News?.source_date | date:'d MMMM, y' }}
+                            </div>
+                            <div class="item_tag" style="margin-bottom:14px;" [innerHTML]="new?.NewsCategory | arrayString"></div>
+                        </div>
+                        <div class="item_img">
+                            {{ news?.News?.type }}
+                            <video *ngIf="new?.News?.type == 'video'" height="240" controls poster="{{ new?.News.thumbnail }}">
+                                <source src="{{new?.News.file}}" type="video/mp4">
+                                <source src="{{new?.News.file}}" type="video/ogg">
+                                Your browser does not support the video tag.
+                            </video>
+                            <audio controls *ngIf="new?.News?.type == 'audio'">
+                                <source src="{{new?.News.file}}" type="audio/ogg">
+                                <source src="{{new?.News.file}}" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <img *ngIf="new?.News?.type == 'pdf'" src="assets/images/pdf.png" (click)="viewDocument(new?.News)"
+                                alt="Image" class="img-t pdf-img">
+                            <img *ngIf="new?.News?.type == 'image'" src="{{new?.News.file}}" alt="Image" class="img-t">
+                            <!-- <div class="upper_img_desc">
+                                <div class="item_tag" [innerHTML]="new?.NewsCategory | arrayString"></div>
+                                <p class="item_txt">{{ new?.News.title }}</p>
+                                <div class="item_time">News No.: {{ new?.News.number }}</div>
+                            </div> -->
+                            <a class="cm-video-link" routerLink="/news/{{new?.News?.id}}"></a>
+                        </div>
+                        <div class="video_info">
+                            <div class="left_info">
+                                <ul>
+                                    <li><a href="javascript:void(0);" [ngStyle]="{'color':new?.News.isLike > 0?'green':''}"
+                                            (click)="addLike(new?.News);"><i class="fa fa-thumbs-up"></i></a>
+                                        {{ new?.News.total_likes }}</li>
+                                    <li><a href="javascript:void(0);" [ngStyle]="{'color':new?.News.isUnLike > 0?'red':''}"
+                                            (click)="addUnLike(new?.News);"><i class="fa fa-thumbs-down"></i></a>
+                                        {{ new?.News.total_dislikes }} </li>
+                                </ul>
+                            </div>
+                            <div class="right_info txt_right">
+                                <ul>
+                                    <li style="float: left"><a href="javascript:void(0);"><i class="fas fa-eye"></i></a>
+                                        {{ new?.News.view_count }}</li>
+                                    <li class="share_icon"><a href="javascript:void(0);" (click)="shareMsg(new?.News);"><i
+                                                class="far fa-share-alt"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <hr class="under_info"> -->
+                            <!-- <div class="left_info txt_left width_100prcnt source_publish_info">
+                                <ul>
+                                    <li>Source <a href="javascript:void(0);"> &nbsp;<i *ngIf="new?.News?.source == 'fb'"
+                                                class="fab fa-facebook"></i><i *ngIf="new?.News?.source == 'twitter'"
+                                                class="fab fa-twitter"></i><i *ngIf="new?.News?.source == 'tv'" class="far fa-tv"></i>
+                                            <i *ngIf="new?.News?.source == 'internet'" class="fa fa-globe"></i> &nbsp;</a>
+                                        {{ new?.News?.source | titlecase }}
+                                        {{ new?.News?.source_date | date:'d MMMM, y' }}</li>
+                                </ul>
+                            </div>
+                            <hr class="under_info">
+                            <div class="left_info txt_left width_100prcnt source_publish_info">
+                                <ul>
+                                    <li>Publish: {{ new?.News?.created_at | date:'d MMMM, y' }}</li>
+                                </ul>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <ng-template #elsetemp>
+                    <div class="no-records">No Records found</div>
+                </ng-template>
+
+            </div>
+        </div>
+        <div id="popupBackground" class="black_overlay"></div>
+    </div>
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>
+<!-- <div class="filter_icon_prnt">
+    <a (click)="filter();" class="filter_icon" [ngClass]="{filter_search:filter_search}"><i
+            class="fal fa-filter"></i></a>
+</div> -->

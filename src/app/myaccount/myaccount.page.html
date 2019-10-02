@@ -1,0 +1,44 @@
+<ion-header>
+            <h3 class="txt_18 top_navbar">
+				<a href="javascript:void(0);" (click)="openMenu()" class="top_nav_icon txt_white top_l_icon"><i class="fas fa-bars"></i></a>
+				<a href="javascript:void(0);" class="txt_white txt_uppercase letter_spacing_3 page_heading"> My Account</a> &nbsp;
+				<!-- <a href="#" onclick="open_search_menu()" class="top_nav_icon txt_white top_r_icon_1" ><i class="far fa-search"></i></a>  -->
+				<a href="javascript:void(0);" class="top_nav_icon txt_white top_r_icon_2 notify_count_icon"><i class="far fa-bell" data-count=""></i></a>
+			</h3>
+</ion-header>
+
+<ion-content>
+   
+			<div class="user_container">
+				<div class="m_t_20 m_b_20 txt_center">
+					<img class="user_image" src="assets/images/user-female.jpg" alt="User Image" width="80px">
+					<h5 class="txt_red txt_uppercase m_t_10 letter_spacing_6">{{ userInfo.first_name}}</h5>
+					<h6 class="txt_black m_t_10 txt_14"><i class="fas fa-map-marker-alt m_r_5"></i> {{ userInfo.address }}</h6>
+				</div>
+			</div>
+
+
+			<div class="main_sec p_lr_15 m_b_70"> <!-- m_b_70 for fixed footer btns -->
+				<div class="m_t_20">
+					<ul class="txt_center list_unstyled profile_links">
+						<li><a href="javascript:void(0);" (click)="dashboard()">Dashboard</a></li>
+						<li><a href="javascript:void(0);" (click)="myaccount()">Account Details</a></li>
+						<li><a href="javascript:void(0);" (click)="changepassword()">Change Password</a></li>
+						<li><a href="javascript:void(0);" (click)="mypur()">My Purchases</a></li>
+						<li><a href="javascript:void(0);" (click)="myad()">My Ads</a></li>
+						<li><a href="javascript:void(0);" (click)="mytrans()">My Transactions</a></li>
+						<li><a href="javascript:void(0);" (click)="mybuyers()">My Buyers</a></li>
+						<li><a href="javascript:void(0);" (click)="myfollowers()">My Followers</a></li>
+						<li><a href="javascript:void(0);" (click)="sellersyoufollow()">Sellers you follow</a></li>
+						<li><a href="javascript:void(0);" (click)="wishlist()">My Wishlist</a></li>
+						<li><a href="javascript:void(0);">Delete my account</a></li>
+						<li><a href="javascript:void(0);">Logout</a></li>
+					</ul>
+				</div>
+				<div class="ftr_btns d_ib width_100prcnt">
+					<a href="javascript:void(0);" class="txt_white input_btn_red"><i class="fas fa-comment"></i> Chat</a>
+					<a href="javascript:void(0);" class="txt_white input_btn_blue"><i class="fas fa-file-signature"></i> Create Your Ad</a>
+				</div>
+			</div> 
+
+</ion-content>

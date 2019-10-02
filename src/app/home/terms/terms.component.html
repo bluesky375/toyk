@@ -1,0 +1,27 @@
+<ion-header>
+    
+	    <h3 class="txt_18 top_navbar">
+				<a href="javascript:void(0);" (click)="home()" class="top_nav_icon txt_white top_l_icon"><i class="fas fa-arrow-left"></i></a>
+				<a href="javascript:void(0);" class="txt_white txt_uppercase letter_spacing_3 page_heading"> Terms & Conditions</a> &nbsp;
+				<!-- <a href="#" onclick="open_search_menu()" class="top_nav_icon txt_white top_r_icon_1" ><i class="far fa-search"></i></a>  -->
+				<a href="javascript:void(0);" class="top_nav_icon txt_white top_r_icon_2 notify_count_icon"><i class="far fa-bell" data-count=""></i></a>
+			</h3>
+</ion-header>
+<ion-content>
+            <div class="main_sec p_lr_15 m_b_70"> <!-- m_b_70 for fixed footer btns -->
+
+				<p class="txt_14 txt_justify m_t_10">
+				    <ion-card-content>
+                            {{ page?.Page.description }}
+                    </ion-card-content></p>
+				
+			</div>
+
+
+			<div class="ftr_btns d_ib width_100prcnt">
+				<a href="create_ad_1.html" class="txt_white input_btn_red"><i class="fas fa-file-signature"></i> Create Your Ad</a>
+				<a href="my_ads.html" class="txt_white input_btn_blue"><i class="fas fa-file-alt"></i> Your Ads</a>
+			</div>
+                    
+                
+</ion-content>

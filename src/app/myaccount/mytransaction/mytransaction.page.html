@@ -1,0 +1,79 @@
+<ion-header>
+            <h3 class="txt_18 top_navbar">
+				<a href="javascript:void(0);" (click)="myaccount()" class="top_nav_icon txt_white top_l_icon"><i class="fas fa-bars"></i></a>
+				<a href="javascript:void(0);" class="txt_white txt_uppercase letter_spacing_3 page_heading"> My Transactions</a> &nbsp;
+				<!-- <a href="#" onclick="open_search_menu()" class="top_nav_icon txt_white top_r_icon_1" ><i class="far fa-search"></i></a>  -->
+				<a href="javascript:void(0);" class="top_nav_icon txt_white top_r_icon_2 notify_count_icon"><i class="far fa-bell" data-count=""></i></a>
+			</h3>
+</ion-header>
+
+<ion-content>
+
+			<div class="search_input p_lr_15 p_t_15">
+				<form action="javascript:void(0)">
+					<div class="form_group">
+						<input type="text" class="search_input_field" placeholder="Search Here">
+						<a class="search_input_icon" href="#"><i class="fas fa-search"></i></a>
+					</div>
+				</form>
+			</div>
+
+			<div class="main_sec p_lr_15 m_b_70 p_t_15"> <!-- m_b_70 for fixed footer btns -->
+
+				<!-- <p class="txt_20 width_100prcnt">Newly Added</p> -->
+
+				<div class="filter_option">
+					<form action="#">
+						<label for="sort_by" class="txt_12">Sort By:
+							<select name="sort_by">
+								<option value="Today">Today</option>
+								<option value="Yesterday">Yesterday</option>
+								<option value="Last Week" selected>Last Week</option>
+								<option value="Last Month">Last Month</option>
+								<option value="Last Week">Last Week</option>
+							</select>
+						</label>
+						<label for="price" class="txt_12">Price:
+							<select name="price">
+								<option value="Low to High" selected>Low to High</option>
+								<option value="High to Low">High to Low</option>
+								<option value="Under $100">Under $100</option>
+							</select>
+						</label>
+					</form>
+				</div>
+
+				<div class="transaction_detail m_t_30">
+					<table width="100%">
+						<tr class="txt_12">
+							<th width="25%">DATE</th>
+							<th width="50%">DETAIL</th>
+							<th width="25%">AMOUNT</th>
+						</tr>
+						<tr class="txt_12">
+							<td>1-06-2019</td>
+							<td>Blue Hero Bike</td>
+							<td><span class="txt_blue txt_w_700">Received</span><br> <label>$450</label></td>
+						</tr>
+						<tr class="txt_12">
+							<td>03-12-2018</td>
+							<td>Round Analog Black Dial Men’s Watch</td>
+							<td><span class="txt_red txt_w_700">Given</span><br> <label>$950</label></td>
+						</tr>
+						<tr class="txt_12">
+							<td>12-06-2019</td>
+							<td>Featured Ad</td>
+							<td><span class="txt_red txt_w_700">Given</span><br> <label>$50</label></td>
+						</tr>
+					</table>
+				</div>
+				
+			</div>
+
+
+			<div class="ftr_btns d_ib width_100prcnt">
+				<a href="create_ad_1.html" class="txt_white input_btn_red"><i class="fas fa-file-signature"></i> Create Your Ad</a>
+				<a href="my_ads.html" class="txt_white input_btn_blue"><i class="fas fa-file-alt"></i> Your Ads</a>
+			</div>
+
+</ion-content>

@@ -1,0 +1,198 @@
+<ion-header>
+
+    <h3 class="txt_18 top_navbar">
+				<a href="javascript:void(0);" (click)="openMenu()" class="top_nav_icon txt_white top_l_icon"><i class="fas fa-bars"></i></a>
+				<a href="javascript:void(0);" class="txt_white txt_uppercase letter_spacing_3 page_heading"><img src="assets/images/logo_without_txt_circle.png" alt="Logo" width="30px" class="m_r_5" style=" margin-top: -12px; position: relative; top: 5px;">  Home</a> &nbsp;
+				<!-- <a href="javascript:void(0)" onclick="open_search_menu()" class="top_nav_icon txt_white top_r_icon_1" ><i class="far fa-search"></i></a>  
+				<a href="javascript:void(0);" (click)="openSearch()" class="top_nav_icon top_r_icon_1 search_icon {{ searchClass }}"><i
+                class="far fa-search" data-count=""></i></a>&nbsp;
+                        {{ keyword }}-->
+				<a href="javascript:void(0);" class="top_nav_icon txt_white top_r_icon_2 notify_count_icon"><i class="far fa-bell" data-count=""></i></a>
+	</h3>
+			<!-- END MENU -----------------------------------////////////////// 
+    <h3 class="txt_20 top_navbar">
+        <a href="javascript:void(0);" (click)="openMenu()" class="top_nav_icon top_l_icon"><i class="far fa-list-ul"></i></a><a
+            href="javascript:void(0);" class="category_top_menu">
+        </a> &nbsp;
+        <a (click)="filter();" class="" [ngClass]="{filter_search:filter_search}"><i class="fal fa-filter"></i></a>&nbsp;
+        <a href="javascript:void(0);" (click)="openSearch()" class="top_nav_icon top_r_icon_1 search_icon {{ searchClass }}"><i
+                class="far fa-search" data-count=""></i></a>&nbsp;
+        {{ keyword }}
+-->
+        <!-- <a (click)="filter();" class="filter_icon" [ngClass]="{filter_search:filter_search}"><i
+                class="fal fa-filter"></i></a>
+
+
+        <a href="javascript:void(0);" (click)="notification()" class="top_nav_icon top_r_icon_2 notify_count_icon"><i
+                *ngIf="totalUnread > 0 else noicon" class="far fa-bell" data-count=""></i>
+            <ng-template #noicon>
+                <i class="far fa-bell"></i>
+            </ng-template>
+        </a>
+    </h3> -->
+</ion-header>
+<ion-content>
+   <!-- <ion-refresher slot="fixed" (ionRefresh)="refresh($event)" snapback-duration="30ms" [disabled]="refreshStatus">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>-->
+	
+	        
+			
+
+
+
+			<div class="search_input p_lr_15 p_t_15 m_b_30">
+				<form action="javascript:void(0)">
+					<div class="form_group">
+						<input type="text" class="search_input_field" placeholder="Search Here">
+						<a class="search_input_icon" href="javascript:void(0)"><i class="fas fa-search"></i></a>
+					</div>
+				</form>
+			</div>
+
+			<div class="main_sec p_lr_15 m_b_70"> <!-- m_b_70 for fixed footer btns -->
+
+				<div class="d_ib width_100prcnt">
+					<p class="side_top_main_heading txt_20 w_73prcnt">Categories</p>
+					<a href="javascript:void(0)" class="side_top_right_icon txt_red txt_20 w_27prcnt" (click)="toggle()" >SEE ALL</a>
+				</div>
+				<div class="top_categories p_t_15 m_b_30 d_ib width_100prcnt">
+					<a href="javascript:void(0)" class="txt_center catg_item">
+						<img src="assets/images/laptop.png" alt="Electronics">
+						<!-- <p class="txt_10">Electronics</p> -->
+						<p class="txt_3vw m_t_10">Electronics</p>
+					</a>
+					<a href="javascript:void(0)" class="txt_center catg_item">
+						<img src="assets/images/sofa.png" alt="Furnitures">
+						<p class="txt_3vw m_t_10">Furnitures</p>
+					</a>
+					<a href="javascript:void(0)" class="txt_center catg_item">
+						<img src="assets/images/car.png" alt="Vehicles">
+						<p class="txt_3vw m_t_10">Vehicles</p>
+					</a>
+					<a href="javascript:void(0)" class="txt_center catg_item">
+						<img src="assets/images/building.png" alt="Apartments">
+						<p class="txt_3vw m_t_10">Apartments</p>
+					</a>
+					<!-- <a href="javascript:void(0)" class="txt_center catg_item">
+						<img src="assets/images/cloths.png" alt="Cloths">
+						<p class="txt_3vw m_t_10">Cloths</p>
+					</a> -->
+				</div>
+				<div class="top_categories d_ib width_100prcnt top_toggle_catgs" id="catgs_toggle_full" *ngIf="show_dialog">
+					<a href="javascript:void(0)" class="txt_center catg_item p_t_15">
+						<!-- <img src="images/cloths.png" alt="Clothes"> -->
+						<span class="top_catg_icons bg_orange"><i class="fas fa-laptop"></i></span>
+						<p class="txt_3vw m_t_10">Clothes</p>
+					</a>
+					<a href="javascript:void(0)" class="txt_center catg_item p_t_15">
+						<!-- <img src="images/lands.png" alt="Lands"> -->
+						<span class="top_catg_icons bg_orange"><i class="fas fa-laptop"></i></span>
+						<p class="txt_3vw m_t_10">Lands</p>
+					</a>
+					<a href="javascript:void(0)" class="txt_center catg_item p_t_15">
+						<!-- <img src="images/mobile.png" alt="Mobiles"> -->
+						<span class="top_catg_icons bg_orange"><i class="fas fa-laptop"></i></span>
+						<p class="txt_3vw m_t_10">Mobiles</p>
+					</a>
+					<a href="javascript:void(0)" class="txt_center catg_item p_t_15">
+						<!-- <img src="images/services.png" alt="Services"> -->
+						<span class="top_catg_icons bg_orange"><i class="fas fa-laptop"></i></span>
+						<p class="txt_3vw m_t_10">Services</p>
+					</a>
+					<a href="javascript:void(0)" class="txt_center catg_item p_t_15">
+						<!-- <img src="images/cloths.png" alt="Sports"> -->
+						<span class="top_catg_icons bg_orange"><i class="fas fa-laptop"></i></span>
+						<p class="txt_3vw m_t_10">Sports</p>
+					</a>
+					<a href="javascript:void(0)" class="txt_center catg_item p_t_15">
+						<!-- <img src="images/cloths.png" alt="Fashion"> -->
+						<span class="top_catg_icons bg_orange"><i class="fas fa-laptop"></i></span>
+						<p class="txt_3vw m_t_10">Fashion</p>
+					</a>
+					<a href="javascript:void(0)" class="txt_center catg_item p_t_15">
+						<!-- <img src="images/cloths.png" alt="Books"> -->
+						<span class="top_catg_icons bg_orange"><i class="fas fa-laptop"></i></span>
+						<p class="txt_3vw m_t_10">Books</p>
+					</a>
+					<a href="javascript:void(0)" class="txt_center catg_item p_t_15">
+						<!-- <img src="images/cloths.png" alt="Pets"> -->
+						<span class="top_catg_icons bg_orange"><i class="fas fa-laptop"></i></span>
+						<p class="txt_3vw m_t_10">Pets</p>
+					</a>
+				</div>
+
+
+
+				<p class="txt_20 width_100prcnt">Newly Added</p>
+
+				<div class="prod_list d_ib width_100prcnt" *ngIf="news?.length > 0; else elsetemp">
+
+					<div class="prod_item match_item" *ngFor="let new of news">
+						<img src="{{new?.News.file}}" alt="Product Image">
+						<div class="prod_info p_lr_10 p_tb_10">
+							<p class="txt_14"><a routerLink="/news/{{new?.News?.id}}">{{new?.News.title}}</a></p>
+							<!--<p class="txt_14"><a href="javascript:void(0)">{{new?.News.title}}</a></p>-->
+							<div class="d_ib width_100prcnt p_t_15">
+								<p class="side_top_main_heading txt_18 w_73prcnt">${{new?.News.number}}</p>
+								<a href="javascript:void(0)" class="side_top_right_icon txt_red txt_20 w_27prcnt"><i class="far fa-heart"></i></a>
+							</div>
+							<p class="prod_location txt_12 p_t_5 txt_grey"><i class="fas fa-map-marker-alt"></i> {{new?.News.location}}</p>
+						</div>
+					</div>
+					
+
+				</div>
+				<ng-template #elsetemp>
+                    <div class="no-records">No Records found</div>
+                </ng-template>
+				
+			</div>
+
+	
+	
+	        <div class="ftr_btns d_ib width_100prcnt">
+				<a href="javascript:void(0)" routerLink="/createad" class="txt_white input_btn_red"><i class="fas fa-file-signature"></i> Create Your Ad</a>
+				<a href="javascript:void(0)" class="txt_white input_btn_blue"><i class="fas fa-file-alt"></i> Your Ads</a>
+			</div>
+
+
+
+			<div id="logout_popup" class="white_content">
+				<h1 class="txt_d_blue txt_center txt_18 txt_w_700">Bye Bye!</h1>
+				<a href="javascript:void(0)" onclick="logout_popup_close();" class="close txt_18 txt_center popup_close_btn"><i class="fas fa-times"></i></a>
+				<p style="clear: both"></p>
+				<p class="popup_txt txt_center txt_16">You have successfully logged out.</p>
+				<a href="login.html" class="input_btn input_btn_blue">OK</a>
+			</div>
+			<div id="popupBackground" class="black_overlay"></div>
+			
+			
+			
+			<script>
+			function open_catg_toggle() {
+			var x = document.getElementById("catgs_toggle_full");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none";
+			}
+		}
+			</script>
+			
+			
+			
+			
+			
+			
+			
+		
+    <!--<ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>-->
+</ion-content>
+<!-- <div class="filter_icon_prnt">
+    <a (click)="filter();" class="filter_icon" [ngClass]="{filter_search:filter_search}"><i
+            class="fal fa-filter"></i></a>
+</div> -->

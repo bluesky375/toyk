@@ -1,0 +1,99 @@
+            <h3 class="txt_18 top_navbar">
+				<a href="#" onclick="open_menu_Nav()" class="top_nav_icon txt_white top_l_icon"><i class="fas fa-bars"></i></a>
+				<a href="#" class="txt_white txt_uppercase letter_spacing_3 page_heading"> Notifications</a> &nbsp;
+				<!-- <a href="#" onclick="open_search_menu()" class="top_nav_icon txt_white top_r_icon_1" ><i class="far fa-search"></i></a>  -->
+				<a href="notifications.html" class="top_nav_icon txt_white top_r_icon_2 notify_count_icon"><i class="far fa-bell" data-count=""></i></a>
+			</h3>
+			<!-- END MENU -----------------------------------////////////////// -->
+
+
+
+			<div class="search_input p_lr_15 p_t_15 m_b_20">
+				<form action="javascript:void(0)">
+					<div class="form_group">
+						<input type="text" class="search_input_field" placeholder="Search Here">
+						<a class="search_input_icon" href="#"><i class="fas fa-search"></i></a>
+					</div>
+				</form>
+			</div>
+
+			<div class="main_sec p_lr_15 m_b_70"> <!-- m_b_70 for fixed footer btns -->
+						<div class="notification_box">
+							<div class="profile_list_image">
+								<img src="images/test.jpg" alt="User Icon" title="User Icon" width="40px" />
+							</div>
+							<div class="notification_content">
+								<div class="txt_black txt_w_700 txt_12">You have a new message from john doe</div>
+								<div class="txt_grey txt_10"> 1 hour ago</div>
+							</div>
+						</div>
+						<div class="notification_box">
+							<div class="profile_list_image">
+								<img src="images/test.jpg" alt="User Icon" title="User Icon" width="40px" />
+							</div>
+							<div class="notification_content">
+								<div class="txt_black txt_w_700 txt_12">You've done the transaction of $256 for “Round Analog Black Dial Men’s Watch”.</div>
+								<div class="txt_grey txt_10"> 2 days ago</div>
+							</div>
+						</div>
+						<div class="notification_box">
+							<div class="profile_list_image">
+								<img src="images/test.jpg" alt="User Icon" title="User Icon" width="40px" />
+							</div>
+							<div class="notification_content">
+								<div class="txt_black txt_w_700 txt_12">John doe started following you.</div>
+								<div class="txt_grey txt_10"> 5 days ago</div>
+							</div>
+						</div>
+			</div>
+
+			<div class="ftr_btns d_ib width_100prcnt">
+				<a href="create_ad_1.html" class="txt_white input_btn_red"><i class="fas fa-file-signature"></i> Create Your Ad</a>
+				<a href="my_ads.html" class="txt_white input_btn_blue"><i class="fas fa-file-alt"></i> Your Ads</a>
+			</div>
+<ion-content>
+    <div class="container bg_doodle_img">
+        <div class="home_page d_ib">
+            <div class="sidebar_topbar">
+                <a href="javascript:void(0);" (click)="home();" class="side_top_left_icon txt_green txt_23"><i
+                        class="far fa-chevron-left"></i></a>
+                <h3 class="side_top_main_heading txt_center txt_18 txt_d_blue p_t_5">Notifications</h3>
+                <a href="javascript:void(0);" (click)="clearNotifications();"
+                    class="side_top_right_icon txt_green txt_14 p_t_5">Clear</a>
+            </div>
+            <div class="inner_sec p_lr_15 p_tb_10" *ngIf="notifications.length > 0">
+                <div class="notific_item" *ngFor="let news of notifications" (click)="redirectNews(news.News);">
+                    <div class="img_sec js_match_height" *ngIf="news.News.type == 'image'">
+                        <img src="{{ news.News.file }}" alt="Img">
+                    </div>
+                    <div class="img_sec js_match_height" *ngIf="news.News.type == 'audio'">
+                        <img src="assets/images/audio.png" alt="Img">
+                    </div>
+                    <div class="img_sec js_match_height" *ngIf="news.News.type == 'video'">
+                        <img src="assets/images/v.png" alt="Img">
+                    </div>
+                    <div class="img_sec js_match_height" *ngIf="news.News.type == 'pdf'">
+                        <img src="assets/images/pdf.png" alt="Img">
+                    </div>
+                    <div class="content_sec js_match_height">
+                        <span *ngIf="news.News.read=='0'" class="new">New</span>
+                        <div class="item_tag" [innerHTML]="news?.NewsCategory | arrayString"></div>
+                        <p class="notify_txt">{{ news?.News.title }} </p>
+                        <li class="notify_source txt_right">Source <a> &nbsp;<i *ngIf="news?.News.source == 'fb'" class="fab fa-facebook"></i><i *ngIf="news?.News.source == 'twitter'" class="fab fa-twitter"></i><i *ngIf="news?.News.source == 'tv'" class="far fa-tv"></i> <i *ngIf="news?.News.source == 'internet'" class="fa fa-globe"></i>&nbsp;</a>
+                            {{ news?.News?.created_at | date:'d MMMM, y h:mm a' }}</li>
+                    </div>
+                </div>
+            </div>
+            <div class="inner_sec p_lr_15 p_tb_10" *ngIf="notifications.length == 0 && !loading">
+                <div class="">
+                    <p>No Notifications</p>
+                </div>
+            </div>
+            <div class="inner_sec p_lr_15 p_tb_10" *ngIf="loading">
+                <div class="">
+                    <p>Loading....</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

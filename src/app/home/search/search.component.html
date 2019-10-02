@@ -1,0 +1,26 @@
+<ion-content>
+    <div id="search_menu" class="sidenav_from_top bg_doodle_img" #search_menu>
+        <div class="sidebar_topbar">
+            <a href="javascript:void(0);" (click)="home()" class="side_top_left_icon txt_green txt_23"><i
+                    class="far fa-chevron-left"></i></a>
+            <h3 class="side_top_main_heading txt_center txt_18 txt_d_blue p_t_5">Search</h3>
+        </div>
+        <div class="inner_sec p_lr_15 p_tb_10 m_t_20">
+            <div class="signup_form ">
+                <form #search="ngForm" (ngSubmit)="searchByKeyword(search)">
+                    <div class="form_group">
+                        <label for="" class="input_label txt_18">Keyword</label>
+                        <input type="text" class="input_field txt_18" required name="keyword" [(ngModel)]="keyword"
+                            placeholder="Enter Keyword">
+                    </div>
+                    <div class="form_group m_b_50">
+                        <input type="submit" class="input_btn txt_18" [disabled]="!search.form.valid" value="APPLY">
+                    </div>
+                    <div class="form_group m_b_50">
+                        <input type="button" class="input_btn txt_18" (click)="clearSearch()" value="CLEAR">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</ion-content>

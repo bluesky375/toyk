@@ -1,0 +1,8 @@
+{
+  "name": "toyk",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "ca260988"
+}

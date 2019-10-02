@@ -1,0 +1,63 @@
+<ion-header>
+    <h3 class="txt_18 top_navbar">
+				<a href="javascript:void(0);" (click)="closeMenu()" class="top_nav_icon txt_white top_l_icon"><i class="fas fa-bars"></i></a>
+				<a href="javascript:void(0);" class="txt_white txt_uppercase letter_spacing_3 page_heading"> Menu</a> &nbsp;
+				<!-- <a href="#" onclick="open_search_menu()" class="top_nav_icon txt_white top_r_icon_1" ><i class="far fa-search"></i></a>  -->
+				<a href="javascript:void(0);" class="top_nav_icon txt_white top_r_icon_2 notify_count_icon"><i class="far fa-bell" data-count=""></i></a>
+	</h3>
+    <!--<h3 class="txt_20 top_navbar">
+        <a href="javascript:void(0);" (click)="closeMenu()" class="top_nav_icon top_l_icon"><i
+                class="far fa-list-ul"></i></a><a href="javascript:void(0);" class="category_top_menu">
+        </a> &nbsp;
+         Home 
+        <a href="javascript:void(0);" (click)="openSearch()"
+            class="top_nav_icon top_r_icon_1 search_icon {{ searchClass }}"><i class="far fa-search"
+                data-count=""></i></a>
+        <a href="javascript:void(0);" (click)="notification()" class="top_nav_icon top_r_icon_2 notify_count_icon"><i class="far fa-bell" data-count=""></i>
+        </a>
+    </h3>-->
+</ion-header>
+            <div id="menu_side_nav" class="sidenav bg_img_light">
+
+				
+
+				<div class="sibebar_nav_items p_lr_15 p_tb_10">
+					<ul class="list_unstyled p_l_0 m_b_50 m_t_0">
+						<li><a href="javascript:void(0);" (click)="home();" ><i class="nav_front_icon fas fa-home"></i> Home <i class="fas fa-angle-right nav_last_icon"></i></a></li>
+						<li><a href="javascript:void(0);" (click)="category()" ><i class="nav_front_icon fas fa-list-ul"></i> Categories <i class="fas fa-angle-right nav_last_icon"></i></a></li>
+						<!--<li><a href="login.html"><i class="nav_front_icon fas fa-sign-in-alt"></i> Login / Register <i class="fas fa-angle-right nav_last_icon"></i></a></li>-->
+						<li><a href="javascript:void(0);" (click)="myaccount()" ><i class="nav_front_icon fas fa-user"></i> My Account <i class="fas fa-angle-right nav_last_icon"></i></a></li>
+						<li><a href="javascript:void(0);" (click)="about_us()"><i class="nav_front_icon fas fa-info-circle"></i>About Us <i class="fas fa-angle-right nav_last_icon"></i></a></li>
+						<li><a href="javascript:void(0);" (click)="faq()"><i class="nav_front_icon fas fa-question-circle"></i> FAQ <i class="fas fa-angle-right nav_last_icon"></i></a></li>
+						<li><a href="javascript:void(0);" (click)="terms()"><i class="nav_front_icon fas fa-file-alt"></i> Terms & Conditions <i class="fas fa-angle-right nav_last_icon"></i></a></li>
+						<li><a href="javascript:void(0);" (click)="privacypolicy()"><i class="nav_front_icon fas fa-exclamation-triangle"></i> Privacy policy <i class="fas fa-angle-right nav_last_icon"></i></a></li>
+						<li><a href="javascript:void(0);" (click)="contact()"><i class="nav_front_icon fas fa-headphones"></i> Contact & Support <i class="fas fa-angle-right nav_last_icon"></i></a></li>
+						<li><a href="javascript:void(0);" (click)="logout()"><i class="nav_front_icon fas fa-sign-out-alt"></i> Logout <i class="fas fa-angle-right nav_last_icon"></i></a></li>
+					</ul>
+					<a href="javascript:void(0);" (click)="creatad()" class="single_create_ad_btn input_btn_red txt_uppercase">Create New Ad</a>
+				</div>
+
+			</div>
+<!--
+<div id="menu_side_nav" class="sidenav bg_doodle_img" #menu_side_nav>
+    <div class="sidebar_topbar">
+        <a href="javascript:void(0)" (click)="closeMenu()" class="side_top_left_icon txt_green txt_23"><i
+                class="far fa-chevron-left"></i></a>
+        <h3 class="side_top_main_heading txt_center txt_18 txt_d_blue p_t_5">Menu</h3>
+    </div>
+    <div class="inner_sec p_lr_20 p_tb_10">
+        <div class="signup_form ">
+            <form action="javascript:void(0);">
+                <div class="side_menus input_checkbox_filter m_b_50">
+                    <!-- <span *ngIf="login"><a (click)="loginM()" class="txt_d_blue">Login</a></span> 
+                    <span><a href="javascript:void(0);" (click)="myaccount()" class="txt_d_blue">My Account</a></span>
+                    <span><a (click)="changePassword();" class="txt_d_blue">Change Password</a></span>
+                    <span><a href="javascript:void(0);" (click)="about_us()" class="txt_d_blue">About Us</a></span>
+                    <span><a href="javascript:void(0);" (click)="terms()" class="txt_d_blue">Terms &
+                            Conditions</a></span>
+                    <span><a href="javascript:void(0);" class="txt_d_blue" (click)="logout()">Logout</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>-->

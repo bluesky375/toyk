@@ -1,0 +1,51 @@
+<ion-header>
+    
+	    <h3 class="txt_18 top_navbar">
+				<a href="javascript:void(0);" (click)="home()" class="top_nav_icon txt_white top_l_icon"><i class="fas fa-arrow-left"></i></a>
+				<a href="javascript:void(0);" class="txt_white txt_uppercase letter_spacing_3 page_heading"> Account Detail</a> &nbsp;
+				<!-- <a href="#" onclick="open_search_menu()" class="top_nav_icon txt_white top_r_icon_1" ><i class="far fa-search"></i></a>  -->
+				<a href="javascript:void(0);" class="top_nav_icon txt_white top_r_icon_2 notify_count_icon"><i class="far fa-bell" data-count=""></i></a>
+			</h3>
+</ion-header>
+<ion-content>
+    <div class="user_container">
+				<div class="m_t_20 m_b_20 txt_center">
+					<img class="user_image" src="assets/images/user-female.jpg" alt="User Image" width="80px">
+					<h5 class="txt_red txt_uppercase m_t_10 letter_spacing_6">{{ userInfo.first_name}}</h5>
+					<h6 class="txt_black m_t_10 txt_14"><i class="fas fa-map-marker-alt m_r_5"></i> {{ userInfo.address }}</h6>
+				</div>
+			</div>
+			<div class="main_sec p_lr_15 m_b_70 m_t_20"> <!-- m_b_70 for fixed footer btns -->
+				
+				<div class="account_detail_sec">
+					<table>
+						<tr>
+							<th>Full Name</th>
+							<td>{{ userInfo.first_name}}</td>
+						</tr>
+						<tr>
+							<th>Email</th>
+							<td>{{ userInfo.email }}</td>
+						</tr>
+						<tr>
+							<th>Contact Number</th>
+							<td>{{ userInfo.phone }}</td>
+						</tr>
+						<tr>
+							<th>Address</th>
+							<td>{{ userInfo.address }}</td>
+						</tr>
+						<tr>
+							<th>Zip Code</th>
+							<td>{{ userInfo.country_code }}</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="ftr_btns d_ib width_100prcnt">
+					<a href="javascript:void(0);" class="txt_white input_btn_red"><i class="fas fa-key"></i> Change password</a>
+					<a href="javascript:void(0);" class="txt_white input_btn_blue"><i class="fas fa-file-signature"></i> Edit Details</a>
+				</div>
+			</div>
+ 
+</ion-content>

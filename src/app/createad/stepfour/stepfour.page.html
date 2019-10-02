@@ -1,0 +1,43 @@
+<div id="catg_side_nav" class="sidenav bg_img_light" >
+
+				<div class="sidebar_topbar txt_20">
+					<!-- <a href="#" onclick="close_menu_Nav()" class="side_top_left_icon txt_white txt_20"><i class="fas fa-chevron-left"></i></a>  -->
+					<p class="side_top_main_heading txt_white txt_uppercase letter_spacing_3 ">Add Ad Details</p>
+					<a href="javascript:void(0);" (click)="categoryrt(id)" class="side_top_right_icon txt_white txt_20"><i class="fas fa-arrow-left"></i></a> 
+				</div>
+				
+				<div class="m_t_20">
+					<!-- <p class="txt_14 txt_center">Sell Your Products</p> -->
+					<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+						<div class="form_group">
+							<span class="input_icon"><i class="fas fa-file-alt"></i></span>
+							<input type="text" [(ngModel)]="ptitle" name="ptitle" class="input_field" placeholder="Product Title">
+						</div>
+						<!--<div class="form_group">
+							<span class="input_icon"><i class="fab fa-dropbox"></i></span>
+							<input type="text" class="input_field" placeholder="Product Name">
+						</div>-->
+						
+						<div class="form_group">
+							<span class="input_icon"><i class="fas fa-calendar-alt"></i></span>
+							<input type="text" class="input_field" placeholder="Product Brand">
+						</div>
+						<div class="form_group">
+							<span class="input_icon"><i class="fas fa-tag"></i></span>
+							<input type="text" class="input_field" placeholder="Product Price">
+						</div>
+						<div class="form_group textarea_group">
+							<span class="input_icon"><i class="fas fa-info-circle"></i></span>
+							<textarea rows="6" class="textarea_field" placeholder="Product Description"></textarea>
+						</div>
+						<div class="form_group">
+							<label class="select_p_imgs_btn input_btn_red"><input type="file" multiple> Select Photos</label>
+						</div>
+					</form>
+				</div>
+				<div class="ftr_btns d_ib width_100prcnt">
+					<a href="javascript:void(0);" (click)="categoryrt(id)"  class="txt_white input_btn_red"><i class="fas fa-arrow-left"></i> Back</a>
+					<a href="create_ad_3.html" class="txt_white input_btn_blue"> Submit <i class="fas fa-arrow-right"></i></a>
+				</div>
+				
+	</div>

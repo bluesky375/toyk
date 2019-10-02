@@ -1,0 +1,15 @@
+            <div id="catg_side_nav" class="sidenav bg_img_light">
+
+				<div class="sidebar_topbar txt_20">
+					<!-- <a href="#" onclick="close_menu_Nav()" class="side_top_left_icon txt_white txt_20"><i class="fas fa-chevron-left"></i></a>  -->
+					<p class="side_top_main_heading txt_white txt_uppercase letter_spacing_3 ">Choose Category</p>
+					<a href="javascript:void(0);" (click)="OpenMenu()" class="side_top_right_icon txt_white txt_20"><i class="fas fa-arrow-left"></i></a> 
+				</div>
+
+				<div class="sibebar_nav_items p_lr_15 p_tb_10">
+					<ul class="list_unstyled p_l_0 m_b_50 m_t_0">
+						<li *ngFor="let category of categories"><a href="javascript:void(0);" (click)="SubCat(category?.Category.id)" ><i class="nav_front_icon fas {{ category?.Category.image }}"></i> {{ category?.Category.title }} <i class="fas fa-angle-right nav_last_icon"></i></a></li>
+					</ul>
+				</div>
+
+			</div>

@@ -1,0 +1,81 @@
+<ion-header>
+    <div class="sidebar_topbar">
+        <a routerLink="/home" class="side_top_left_icon txt_green txt_23"><i class="far fa-chevron-left"></i></a>
+        <h3 class="side_top_main_heading txt_center txt_18 txt_d_blue p_t_5">Filter</h3>
+        <!-- <a routerLink="/home" class="side_top_right_icon txt_green txt_14 p_t_5">Close</a> -->
+    </div>
+</ion-header>
+<ion-content>
+    <div class="container bg_doodle_img">
+        <div class="home_page d_ib">
+
+            <div class="inner_sec p_lr_15 p_tb_10">
+
+                <div class="signup_form ">
+                    <form #searchForm="ngForm" (ngSubmit)="onSubmit(searchForm)">
+                        <div class="form_group input_radio_filter">
+                            <label for="" class="input_label txt_18">Time Range</label>
+                            <ion-list>
+                                <ion-radio-group (ionChange)="onChnge($event)" name="search_type"
+                                    [(ngModel)]="search_type" required value="{{ formdata?.form.search_type }}">
+                                    <ion-item>
+                                        <ion-label>Last Day</ion-label>
+                                        <ion-radio value="day" ></ion-radio>
+                                    </ion-item>
+
+                                    <ion-item>
+                                        <ion-label>Last Week</ion-label>
+                                        <ion-radio value="week" ></ion-radio>
+                                    </ion-item>
+
+                                    <ion-item>
+                                        <ion-label>Last Month</ion-label>
+                                        <ion-radio value="month"  ></ion-radio>
+                                    </ion-item>
+
+                                    <ion-item>
+                                        <ion-label>Last Year</ion-label>
+                                        <ion-radio value="year" ></ion-radio>
+                                    </ion-item>
+                                    <ion-item>
+                                        <ion-label>Custom</ion-label>
+                                        <ion-radio value="custom" ></ion-radio>
+                                    </ion-item>
+                                </ion-radio-group>
+                            </ion-list>
+                        </div>
+                        <div class="m_t_20 m_b_30 filter_date" *ngIf="custom">
+                            <div class="form_group">
+
+                                <div class="start_date">
+                                    <label for="" class="input_label txt_18">From</label>
+                                    <input type="text" class="input_field txt_18" name="from" [(ngModel)]="from"
+                                        (click)="showDatepicker()" placeholder="Enter Date" value="{{ formdata?.form.from }}" readonly>
+                                    <span class="input_icon"><i class="fal fa-calendar-alt"></i></span>
+                                </div>
+                                <div class="end_date">
+                                    <label for="" class="input_label txt_18">To</label>
+                                    <input type="text" class="input_field txt_18" name="to" [(ngModel)]="to"
+                                        (click)="showDatepicker('to')" placeholder="Enter Date" value="{{ formdata?.form.to }}" readonly>
+                                    <span class="input_icon"><i class="fal fa-calendar-alt"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <label for="" class="input_label txt_18">Categories</label>
+                            <app-category (catSearch)="addCategory($event)" selectedCat="{{ selected_categories }}" ></app-category>
+                        </div>
+                        <div class="form_group m_b_50">
+                            <input type="submit" class="input_btn txt_18"
+                                [disabled]="!searchForm.form.valid && categories?.length == 0" value="APPLY">
+
+                        </div>
+                        <div class="form_group m_b_50">
+                            <input type="button" (click)="reset()" class="input_btn txt_18" value="RESET">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
